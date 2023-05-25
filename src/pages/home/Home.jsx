@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Form from '../../components/form/Form'
 import Banner from '../../components/banner/Banner'
@@ -10,7 +10,7 @@ import CategoryItem from '../categoryItem/CategoryItem'
 import s from './Home.module.css'
 import ProductItem from '../../components/productItem/ProductItem'
 
-export default function Home() {
+ function Home() {
   const store = useSelector((store) => store)
   const categories = store.categories.categories
   const products = store.products
@@ -64,3 +64,6 @@ export default function Home() {
     </div>
   )
 }
+
+
+export default memo(Home)

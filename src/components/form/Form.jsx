@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 import dwarf from '../../assets/dwarf.png'
 import s from './Form.module.css'
 import Button from '../button/Button'
+import { useDispatch, useSelector } from 'react-redux'
+import { getValueInputAction, inputAction } from '../../store/formReducer'
 
-export default function Form() {
-  const [inputValue, setInputValue] = useState('+49')
+ function Form() {
+  const inputValue = useSelector( (store)=> store.form.value )
+  const dispatch = useDispatch()
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // Do something with the submitted value
-    console.log('Submitted value:', event)
+    dispatch(inputAction)
   }
 
   const handleChange = (event) => {
-    setInputValue(event.target.value)
+    if (/[0-9]/.test(Number(event.target.value))) {
+      dispatch(getValueInputAction(event.target.value))
+    }
   }
 
   return (
@@ -26,7 +30,7 @@ export default function Form() {
         <h2>on the first order</h2>
 
         <form onSubmit={handleSubmit}>
-          <input type="tel" value={inputValue} onChange={handleChange} />
+          <input type="tel" value={inputValue} onChange={handleChange} name='input' />
           <Button className={s.form_button} type="submit">
             Get a discount
           </Button>
@@ -35,3 +39,6 @@ export default function Form() {
     </div>
   )
 }
+
+
+export default memo(Form)
