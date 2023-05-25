@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.logo img{
+  margin-right: 60px;
+}
+
+.logo{
+  display: flex;
+  align-items:center;
+}
+.headerMenu{
+display: flex;
+align-items:center;
+}
+
+.cartIcon{
+  margin-left: 175px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.cartIcon img {
+  width: 100%;
+}
+
+.header_button {
+  width: 125px;
+  height: 49px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background: #339933;
+  border: 2px solid #339933;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer; 
+} 

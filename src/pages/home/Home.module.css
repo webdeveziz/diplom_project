@@ -1,0 +1,70 @@
+.home {
+  
+}
+
+
+/* categories random */
+.categories {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoriesTitle {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.categoriesTitle h2 {
+  width: 170px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #000000;
+  margin-right: 90px;
+}
+
+.categoriesTitle a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  color: #8B8B8B;
+  border: 2px solid #8B8B8B;
+  padding: 6px;
+  width: 120px;
+  height: 30px;
+}
+
+.categoriesContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* products sales random */
+
+.sales{
+max-width: 1440px;
+margin: 0 auto;
+}
+.salesTitle{
+  width: 92px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.salesContent{
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}

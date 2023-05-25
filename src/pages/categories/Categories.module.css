@@ -1,0 +1,43 @@
+.categories {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.categoryTitle{
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 80px;
+  color: #000;
+}
+.categoryContent{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap:35px;
+}
+.category{
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.categoryImg{
+  width: 320px;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.categoryImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.category p{
+  width: 260px;
+  text-align: center;
+}
+

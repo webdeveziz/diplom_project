@@ -1,0 +1,21 @@
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+  }
+
+  .nav_menu a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    text-decoration: none;
+    }
+.nav_menu a:hover{
+    color: rgb(54, 54, 247);
+} 
+ 
+
+  
