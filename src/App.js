@@ -5,8 +5,8 @@ import 'typeface-montserrat'
 
 import Header from './components/header/Header'
 import Home from './pages/home/Home'
-import Product from './pages/product/Product'
 import Products from './pages/products/Products'
+import Product from './pages/product/Product'
 import Cart from './pages/cart/Cart'
 import Sales from './components/sales/Sales'
 import NotFoundPage from './pages/notFoundPage/NotFoundPage'
@@ -21,14 +21,15 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="products/*" element={<Products />}>
-          <Route path=":productId" element={<Product />} />
-        </Route>
+        <Route path="products/*" element={<Products />} />
+        <Route path="products/:productId" element={<Product />} />
         <Route path="sales" element={<Sales />} />
+        <Route path="sales/:productId" element={<Product />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="categories/*" element={<Categories />}>
-          <Route path=":categoryId" element={<Products />} />
-        </Route>
+        <Route path="categories/*" element={<Categories />} />
+        <Route path="categories/:categoryId" element={<Products />} />/
+        <Route path="categories/:categoryId/:productId" element={<Product />} />
+        /
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

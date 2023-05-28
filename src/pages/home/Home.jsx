@@ -10,7 +10,7 @@ import CategoryItem from '../categoryItem/CategoryItem'
 import s from './Home.module.css'
 import ProductItem from '../../components/productItem/ProductItem'
 
- function Home() {
+function Home() {
   const store = useSelector((store) => store)
   const categories = store.categories.categories
   const products = store.products
@@ -57,13 +57,12 @@ import ProductItem from '../../components/productItem/ProductItem'
         <div className={s.salesContent}>
           {randomSaleProducts.length > 0 &&
             randomSaleProducts.map((elem) => (
-              <ProductItem {...elem} key={elem.id} />
+              <ProductItem {...elem} key={elem.id} link={'products/'} />
             ))}
         </div>
       </div>
     </div>
   )
 }
-
 
 export default memo(Home)

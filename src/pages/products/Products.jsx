@@ -8,12 +8,11 @@ import { fetchProductList } from '../../requests/requests'
 
 export default function Products() {
   const dispatch = useDispatch()
+  const products = useSelector((store) => store.products)
 
   useEffect(() => {
-    dispatch(fetchProductList())
+    if (products.length <= 0) dispatch(fetchProductList())
   }, [])
-
-  const products = useSelector((store) => store.products)
 
   return (
     <div className={s.products}>

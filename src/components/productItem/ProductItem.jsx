@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import s from './ProductItem.module.css'
+import { Link } from 'react-router-dom'
 
 const base_url = 'http://localhost:3333'
 
@@ -10,22 +11,24 @@ export default function ProductItem({
   title,
   price,
   discont_price,
+  link,
 }) {
-
   const [visible, setVisible] = useState(false)
 
-  const percentagePrice = Math.floor((price-discont_price)/price*100) 
+  const percentagePrice = Math.floor(((price - discont_price) / price) * 100)
 
   return (
     <div className={s.productItem}>
-      <div 
-      className={s.productItemImg} 
-      onMouseOver={() => setVisible(true)} 
-      onMouseLeave={()=> setVisible(false)}
+      <div
+        className={s.productItemImg}
+        onMouseOver={() => setVisible(true)}
+        onMouseLeave={() => setVisible(false)}
       >
-        <img src={base_url + image} />
+        <Link to={link ? link + id : id.toString()}>
+          <img src={base_url + image} />
+        </Link>
         {visible && <button className={s.addToCart}>Add to cart</button>}
-      </div> 
+      </div>
 
       <div className={s.wrapper}>
         <p className={s.price}>{price}$</p>
